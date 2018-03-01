@@ -1,0 +1,146 @@
+# Logfile created on 2018-03-01 15:19:54 +0100 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 15:19:54 +0100 cap production
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 15:20:40 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1ea23af2] Running /usr/bin/env mkdir -p /tmp as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [1ea23af2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [fff200f8] Running /usr/bin/env #<StringIO:0x00000000035a99e0> /tmp/git-ssh-aikievolutis-production-Max.sh as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [fff200f8] Command: /usr/bin/env #<StringIO:0x00000000035a99e0> /tmp/git-ssh-aikievolutis-production-Max.sh
+  INFO [de842bd6] Running /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [de842bd6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh
+  INFO [f425d3b6] Running /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [f425d3b6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD )
+  INFO [f916fe75] Running /usr/bin/env mkdir -p /shared /releases as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [f916fe75] Command: /usr/bin/env mkdir -p /shared /releases
+ DEBUG [d2385651] Running [ -f /current/REVISION ] as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [d2385651] Command: [ -f /current/REVISION ]
+ DEBUG [a27ef161] Running /usr/bin/env cat /current/REVISION 2>/dev/null as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [a27ef161] Command: /usr/bin/env cat /current/REVISION 2>/dev/null
+ DEBUG [bea28632] Running [ -f /repo/HEAD ] as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [bea28632] Command: [ -f /repo/HEAD ]
+  INFO The repository mirror is at /repo
+ DEBUG [c4b5f165] Running if test ! -d /repo; then echo "Directory does not exist '/repo'" 1>&2; false; fi as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [c4b5f165] Command: if test ! -d /repo; then echo "Directory does not exist '/repo'" 1>&2; false; fi
+  INFO [f91c7202] Running /usr/bin/env git remote set-url origin git@github.com:Moutoneige/newsite.git as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [f91c7202] Command: cd /repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git remote set-url origin git@github.com:Moutoneige/newsite.git )
+  INFO [0b9a0d40] Running /usr/bin/env git remote update --prune as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [0b9a0d40] Command: cd /repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6adb7c17] Running if test ! -d /repo; then echo "Directory does not exist '/repo'" 1>&2; false; fi as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [6adb7c17] Command: if test ! -d /repo; then echo "Directory does not exist '/repo'" 1>&2; false; fi
+  INFO [0fb4a9fe] Running /usr/bin/env mkdir -p /releases/20180301142040 as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [0fb4a9fe] Command: cd /repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env mkdir -p /releases/20180301142040 )
+  INFO [a0150b10] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /releases/20180301142040 as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [a0150b10] Command: cd /repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /releases/20180301142040 )
+ DEBUG [76925463] Running if test ! -d /repo; then echo "Directory does not exist '/repo'" 1>&2; false; fi as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [76925463] Command: if test ! -d /repo; then echo "Directory does not exist '/repo'" 1>&2; false; fi
+ DEBUG [ac0d1792] Running /usr/bin/env git rev-list --max-count=1 master as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [ac0d1792] Command: cd /repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e0bfc374] Running if test ! -d /releases/20180301142040; then echo "Directory does not exist '/releases/20180301142040'" 1>&2; false; fi as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [e0bfc374] Command: if test ! -d /releases/20180301142040; then echo "Directory does not exist '/releases/20180301142040'" 1>&2; false; fi
+  INFO [cf9c44da] Running /usr/bin/env echo "" >> REVISION as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [cf9c44da] Command: cd /releases/20180301142040 && /usr/bin/env echo "" >> REVISION
+  INFO [403b1a2d] Running /usr/bin/env ln -s /releases/20180301142040 /releases/current as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [403b1a2d] Command: /usr/bin/env ln -s /releases/20180301142040 /releases/current
+  INFO [2bc9b4f5] Running /usr/bin/env mv /releases/current / as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [2bc9b4f5] Command: /usr/bin/env mv /releases/current /
+ DEBUG [cd40ed4f] Running /usr/bin/env ls -x /releases as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [cd40ed4f] Command: /usr/bin/env ls -x /releases
+ DEBUG [de6b1b9e] Running if test ! -d /releases; then echo "Directory does not exist '/releases'" 1>&2; false; fi as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [de6b1b9e] Command: if test ! -d /releases; then echo "Directory does not exist '/releases'" 1>&2; false; fi
+  INFO [f8e89a93] Running /usr/bin/env echo "Branch master (at ) deployed as release 20180301142040 by Max" >> /revisions.log as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [f8e89a93] Command: cd /releases && /usr/bin/env echo "Branch master (at ) deployed as release 20180301142040 by Max" >> /revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 15:20:55 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8b1de421] Running /usr/bin/env mkdir -p /tmp as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [8b1de421] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 15:23:18 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a89ff199] Running /usr/bin/env mkdir -p /tmp as u72660647-MB@home508971167.1and1-data.host
+ DEBUG [a89ff199] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 15:59:53 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4c35021d] Running /usr/bin/env mkdir -p /tmp as u72660647@home508971167.1and1-data.host
+ DEBUG [4c35021d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4c35021d] Finished in 14.295 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 0.0%
+  INFO Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 100.0%
+  INFO [4bc89a18] Running /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh as u72660647@home508971167.1and1-data.host
+ DEBUG [4bc89a18] Command: /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh
+  INFO [4bc89a18] Finished in 0.230 seconds with exit status 0 (successful).
+  INFO [573c6c08] Running /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD as u72660647@home508971167.1and1-data.host
+ DEBUG [573c6c08] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD )
+ DEBUG [573c6c08] 	fatal: cannot exec '/tmp/git-ssh-aikievolutis-production-Max.sh': Permission denied
+ DEBUG [573c6c08] 	fatal: unable to fork
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 16:02:59 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [87fc546b] Running /usr/bin/env mkdir -p /tmp as u72660647@home508971167.1and1-data.host
+ DEBUG [87fc546b] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 16:05:11 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2eda86ca] Running /usr/bin/env mkdir -p /tmp as u72660647@home508971167.1and1-data.host
+ DEBUG [2eda86ca] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2eda86ca] Finished in 9.806 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 0.0%
+  INFO Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 100.0%
+  INFO [a38f5d27] Running /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh as u72660647@home508971167.1and1-data.host
+ DEBUG [a38f5d27] Command: /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh
+  INFO [a38f5d27] Finished in 0.231 seconds with exit status 0 (successful).
+  INFO [31d516dd] Running /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD as u72660647@home508971167.1and1-data.host
+ DEBUG [31d516dd] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD )
+ DEBUG [31d516dd] 	fatal: cannot exec '/tmp/git-ssh-aikievolutis-production-Max.sh': Permission denied
+ DEBUG [31d516dd] 	fatal: unable to fork
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 16:08:48 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a81e499d] Running /usr/bin/env mkdir -p /tmp as u72660647@home508971167.1and1-data.host
+ DEBUG [a81e499d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a81e499d] Finished in 9.327 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 0.0%
+  INFO Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 100.0%
+  INFO [c65ba090] Running /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh as u72660647@home508971167.1and1-data.host
+ DEBUG [c65ba090] Command: /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh
+  INFO [c65ba090] Finished in 0.221 seconds with exit status 0 (successful).
+  INFO [0a70c82c] Running /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD as u72660647@home508971167.1and1-data.host
+ DEBUG [0a70c82c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD )
+ DEBUG [0a70c82c] 	fatal: cannot exec '/tmp/git-ssh-aikievolutis-production-Max.sh': Permission denied
+ DEBUG [0a70c82c] 	fatal: unable to fork
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 16:17:12 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e994dd81] Running /usr/bin/env mkdir -p /tmp as u72660647@home508971167.1and1-data.host
+ DEBUG [e994dd81] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e994dd81] Finished in 10.196 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 0.0%
+  INFO Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 100.0%
+  INFO [9557d8db] Running /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh as u72660647@home508971167.1and1-data.host
+ DEBUG [9557d8db] Command: /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh
+  INFO [9557d8db] Finished in 0.220 seconds with exit status 0 (successful).
+  INFO [3e8d79ec] Running /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD as u72660647@home508971167.1and1-data.host
+ DEBUG [3e8d79ec] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD )
+ DEBUG [3e8d79ec] 	fatal: 
+ DEBUG [3e8d79ec] 	cannot exec '/tmp/git-ssh-aikievolutis-production-Max.sh': Permission denied
+ DEBUG [3e8d79ec] 	
+ DEBUG [3e8d79ec] 	fatal: unable to fork
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 16:24:13 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [46b6be54] Running /usr/bin/env mkdir -p /tmp as u72660647@home508971167.1and1-data.host
+ DEBUG [46b6be54] Command: /usr/bin/env mkdir -p /tmp
+  INFO [46b6be54] Finished in 9.441 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 0.0%
+  INFO Uploading /tmp/git-ssh-aikievolutis-production-Max.sh 100.0%
+  INFO [ac2e5047] Running /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh as u72660647@home508971167.1and1-data.host
+ DEBUG [ac2e5047] Command: /usr/bin/env chmod 700 /tmp/git-ssh-aikievolutis-production-Max.sh
+  INFO [ac2e5047] Finished in 0.220 seconds with exit status 0 (successful).
+  INFO [569efa71] Running /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD as u72660647@home508971167.1and1-data.host
+ DEBUG [569efa71] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-aikievolutis-production-Max.sh" ; /usr/bin/env git ls-remote git@github.com:Moutoneige/newsite.git HEAD )
+ DEBUG [569efa71] 	fatal: cannot exec '/tmp/git-ssh-aikievolutis-production-Max.sh': Permission denied
+ DEBUG [569efa71] 	fatal: unable to fork
